@@ -1,0 +1,48 @@
+{
+  "name": "github-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "lint": "prettier --write --single-quote --trailing-comma es5 src/**/*.ts",
+    "test": "jest",
+    "test:watch": "npm test -- --watch",
+    "precommit": "npm test && lint-staged"
+  },
+  "author": "Darran Shepherd",
+  "license": "MIT",
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
+    "uri-templates": "^0.2.0"
+  },
+  "devDependencies": {
+    "@types/isomorphic-fetch": "0.0.34",
+    "@types/jest": "^22.2.0",
+    "@types/node": "^9.4.7",
+    "@types/uri-templates": "^0.1.28",
+    "fetch-mock": "^6.3.0",
+    "husky": "^0.14.3",
+    "jest": "^22.4.2",
+    "lint-staged": "^7.0.1",
+    "prettier": "^1.11.1",
+    "ts-jest": "^22.4.1",
+    "typescript": "^2.7.2"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "transform": {
+      ".ts": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": ".*\\.spec\\.ts$"
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "prettier --write --single-quote --trailing-comma es5",
+      "git add"
+    ]
+  }
+}

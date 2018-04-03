@@ -1,0 +1,33 @@
+interface GitHubClient {
+  currentUser: () => Promise<any>;
+  currentUserAuthorizationsHtml: () => Promise<any>;
+  authorizations: () => Promise<any>;
+  codeSearch: (params: { query: string }) => Promise<any>;
+  commitSearch: () => Promise<any>;
+  emails: () => Promise<any>;
+  emojis: () => Promise<any>;
+  events: () => Promise<any>;
+  feeds: () => Promise<any>;
+  followers: () => Promise<any>;
+  following: () => Promise<any>;
+  gists: () => Promise<any>;
+  hub: () => Promise<any>;
+  issue_search: () => Promise<any>;
+  issues: () => Promise<any>;
+  keys: () => Promise<any>;
+  notifications: () => Promise<any>;
+  organizationRepositories: () => Promise<any>;
+  organization: () => Promise<any>;
+  publicGists: () => Promise<any>;
+  rateLimit: () => Promise<any>;
+  repository: () => Promise<any>;
+  repositorySearch: () => Promise<any>;
+  currentUserRepositories: () => Promise<any>;
+  starred: () => Promise<any>;
+  starredGists: () => Promise<any>;
+  team: () => Promise<any>;
+  user: () => Promise<any>;
+  userOrganizations: () => Promise<any>;
+  userRepositories: () => Promise<any>;
+  userSearch: () => Promise<any>;
+}

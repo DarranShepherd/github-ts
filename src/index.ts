@@ -1,0 +1,1 @@
+export { GitHubClientFactory } from './client';
