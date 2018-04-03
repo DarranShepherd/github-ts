@@ -13,7 +13,7 @@
   "author": "Darran Shepherd",
   "license": "MIT",
   "dependencies": {
-    "isomorphic-fetch": "^2.2.1",
+    "fetch-ponyfill": "^6.0.1",
     "uri-templates": "^0.2.0"
   },
   "devDependencies": {

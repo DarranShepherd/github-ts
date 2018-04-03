@@ -1,5 +1,7 @@
-import isoFetch from 'isomorphic-fetch';
+import fetchPonyfill from 'fetch-ponyfill';
 import uriTemplate from 'uri-templates';
+
+const { fetch, Request, Response, Headers } = fetchPonyfill();
 
 export class GitHubClientFactory {
   token: string;
@@ -18,7 +20,7 @@ export class GitHubClientFactory {
       'User-Agent': 'darranshepherd',
     });
     let template = uriTemplate(url);
-    return isoFetch(template.fillFromObject(params), { headers })
+    return fetch(template.fillFromObject(params), { headers })
       .then((resp: Response) => resp.json())
       .then(
         (json: any) =>
